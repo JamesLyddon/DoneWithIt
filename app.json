@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Mosh React Native Project",
+    "githubUrl": "https://github.com/JamesLyddon/DoneWithIt"
   }
 }
