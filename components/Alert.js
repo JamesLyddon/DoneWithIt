@@ -20,7 +20,7 @@ import {
 
 import TitleScreen from "./components/TitleScreen";
 
-export default function App() {
+export default function Alert() {
   return (
     <SafeAreaView style={styles.container}>
       <Button

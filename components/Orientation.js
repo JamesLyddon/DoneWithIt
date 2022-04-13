@@ -26,7 +26,7 @@ import {
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 
-export default function ResponsiveHeight() {
+export default function Orientation() {
   const { landscape } = useDeviceOrientation();
 
   return (

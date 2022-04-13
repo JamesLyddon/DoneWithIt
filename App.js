@@ -1,50 +1,45 @@
 // import { StatusBar } from "expo-status-bar";
 import {
-  Dimensions,
   StyleSheet,
-  Text,
   View,
   Image,
-  Button,
-  Alert,
+  Text,
   StatusBar,
   SafeAreaView,
-  ImageBackground,
-  TouchableWithoutFeedback,
-  TouchableOpacity,
-  TouchableHighlight,
-  TouchableNativeFeedback,
 } from "react-native";
 
-import {
-  useDimensions,
-  useDeviceOrientation,
-} from "@react-native-community/hooks";
-
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
-} from "react-native-responsive-screen";
+import { useDeviceOrientation } from "@react-native-community/hooks";
 
 export default function App() {
-  const { landscape } = useDeviceOrientation();
-
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
+      <Image
+        style={{ flex: 1, height: undefined, width: undefined }}
+        source={require("./assets/background.jpg")}
+      />
       <View
         style={{
-          backgroundColor: "dodgerblue",
-          width: "100%",
-          height: landscape ? "100%" : "30%",
+          position: "absolute",
+          alignSelf: "center",
+          top: 80,
         }}
-      ></View>
-    </SafeAreaView>
+      >
+        <Image
+          style={{
+            width: 100,
+            height: 100,
+            alignSelf: "center",
+          }}
+          source={require("./assets/logo-red.png")}
+        />
+        <Text>Sell what you don't need</Text>
+      </View>
+      <View style={{ height: 50, backgroundColor: "tomato" }}></View>
+      <View style={{ height: 50, backgroundColor: "turquoise" }}></View>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  },
+  container: { flex: 1 },
 });
