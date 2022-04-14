@@ -1,45 +1,8 @@
-// import { StatusBar } from "expo-status-bar";
-import {
-  StyleSheet,
-  View,
-  Image,
-  Text,
-  StatusBar,
-  SafeAreaView,
-} from "react-native";
+import { StyleSheet, View, Text } from "react-native";
+import ViewImageScreen from "./app/screens/ViewImageScreen";
 
-import { useDeviceOrientation } from "@react-native-community/hooks";
+import WelcomeScreen from "./app/screens/WelcomeScreen";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Image
-        style={{ flex: 1, height: undefined, width: undefined }}
-        source={require("./assets/background.jpg")}
-      />
-      <View
-        style={{
-          position: "absolute",
-          alignSelf: "center",
-          top: 80,
-        }}
-      >
-        <Image
-          style={{
-            width: 100,
-            height: 100,
-            alignSelf: "center",
-          }}
-          source={require("./assets/logo-red.png")}
-        />
-        <Text>Sell what you don't need</Text>
-      </View>
-      <View style={{ height: 50, backgroundColor: "tomato" }}></View>
-      <View style={{ height: 50, backgroundColor: "turquoise" }}></View>
-    </View>
-  );
+  return <ViewImageScreen />;
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1 },
-});
