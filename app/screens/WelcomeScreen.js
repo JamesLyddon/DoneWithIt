@@ -24,11 +24,17 @@ function WelcomeScreen(props) {
         <Image style={styles.logo} source={require("../assets/logo-red.png")} />
         <Text>Sell what you don't need</Text>
       </View>
-      <TouchableOpacity style={[styles.loginButton, styles.buttons]}>
-        <Text style={styles.buttonText}>View Image</Text>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("Image")}
+        style={[styles.loginButton, styles.buttons]}
+      >
+        <Text style={styles.buttonText}>View Image Screen</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={[styles.registerButton, styles.buttons]}>
-        <Text style={styles.buttonText}>Exit</Text>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("Temp")}
+        style={[styles.registerButton, styles.buttons]}
+      >
+        <Text style={styles.buttonText}>View Temp Screen</Text>
       </TouchableOpacity>
     </ImageBackground>
   );

@@ -1,13 +1,22 @@
 import React from "react";
-import { View, Image, StyleSheet } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+
+import { View, Image, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 import colors from "../config/colors";
 
 function ViewImageScreen(props) {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
-      <View style={[styles.closeIcon, styles.icon]}></View>
-      <View style={[styles.deleteIcon, styles.icon]}></View>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("Welcome")}
+        style={[styles.closeIcon, styles.icon]}
+      ></TouchableOpacity>
+      <TouchableOpacity
+        style={[styles.deleteIcon, styles.icon]}
+      ></TouchableOpacity>
 
       <Image
         style={styles.image}
@@ -30,6 +39,7 @@ const styles = StyleSheet.create({
   icon: {
     width: 50,
     height: 50,
+    zIndex: 1,
   },
   closeIcon: {
     backgroundColor: colors.primary,

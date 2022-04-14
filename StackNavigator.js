@@ -3,6 +3,7 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
+import TempScreen from "./app/screens/TempScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -14,8 +15,9 @@ const StackNavigator = () => {
       }}
     >
       <Stack.Group>
-        <Stack.Screen name="Home" component={WelcomeScreen}></Stack.Screen>
+        <Stack.Screen name="Welcome" component={WelcomeScreen}></Stack.Screen>
         <Stack.Screen name="Image" component={ViewImageScreen}></Stack.Screen>
+        <Stack.Screen name="Temp" component={TempScreen}></Stack.Screen>
       </Stack.Group>
     </Stack.Navigator>
   );
