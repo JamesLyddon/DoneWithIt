@@ -9,12 +9,10 @@ import {
   ImageBackground,
   StyleSheet,
 } from "react-native";
-
 import colors from "../config/colors";
 
 function TempScreen(props) {
   const navigation = useNavigation();
-
   return (
     <ImageBackground
       style={styles.background}
